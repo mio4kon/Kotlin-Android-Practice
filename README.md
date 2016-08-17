@@ -440,6 +440,11 @@ class GankioAdapter(val items: List<Meizi>) : Adapter<GankioAdapter.ViewHolder>(
     }
 }
 ```
+效果图:
+
+![](art/KotlinPractice.jpeg)
+
+
 ## 总结
 
 至此,Kotlin的Android实践算是完篇了.其中有很多地方是可以改进的.比如:    
@@ -452,6 +457,9 @@ class GankioAdapter(val items: List<Meizi>) : Adapter<GankioAdapter.ViewHolder>(
 最近也在是在研究`kotlin`的语法,所以写了这篇文章.总体来说`kotlin`的语法还是非常优雅的.
 很多语法糖使用起来非常的爽,尤其是工具类的使用.有一点不习惯的是`Kotlin`所有变量都默认的必须不为`null`,除非显式的在后面加`?`.而`java`却不是这样.但所带来的成本可能就是在`java`中需要经常做非空判断.尤其是上一层api的不透明性,导致这层判空必须要做.所以很多`java`框架也都用了注释`@Nullable`来解决这个问题.
 
+## 源文件
+
+[https://github.com/mio4kon/Kotlin-Android-Practice](https://github.com/mio4kon/Kotlin-Android-Practice)
 
 ## 参考
 
