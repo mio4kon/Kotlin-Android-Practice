@@ -20,6 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this,RecyclerViewActivity.class);
        this.startActivity(intent);
-
+        int color = getResources().getColor(R.color.colorAccent);
     }
 }

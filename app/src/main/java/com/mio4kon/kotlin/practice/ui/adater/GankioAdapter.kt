@@ -10,6 +10,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.mio4kon.kotlin.practice.R
 import com.mio4kon.kotlin.practice.model.Meizi
+import com.mio4kon.kotlin.practice.util.loadUrl
 import org.jetbrains.anko.find
 
 /**
@@ -35,7 +36,7 @@ class GankioAdapter(val items: List<Meizi>) : Adapter<GankioAdapter.ViewHolder>(
         private var imageView: ImageView = root.find<ImageView>(R.id.iv_mio)
 
         fun setImage(url: String) {
-            Glide.with(imageView.context).load(url).fitCenter().into(imageView)
+            imageView.loadUrl(url)
         }
 
     }
