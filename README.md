@@ -1,7 +1,8 @@
 # Kotlin-Android-Practice
-Kotlin For Android 实践
 
-[http://mio4kon.com/2016/08/17/Kotlin%20for%20Android%E5%AE%9E%E8%B7%B5/](http://mio4kon.com/2016/08/17/Kotlin%20for%20Android%E5%AE%9E%E8%B7%B5/) 
+[Why Use Kotlin & Kotlin Use Case](http://mio4kon.com/2016/08/30/Why%20use%20Kotlin%20&%20Kotlin%20Use%20Case%20%20/) 
+
+[Kotlin For Android 实践](http://mio4kon.com/2016/08/17/Kotlin%20for%20Android%E5%AE%9E%E8%B7%B5/) 
 
 ## 准备
 
