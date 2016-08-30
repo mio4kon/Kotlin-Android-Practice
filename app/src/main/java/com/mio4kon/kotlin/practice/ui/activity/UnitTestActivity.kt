@@ -10,6 +10,7 @@ import com.mio4kon.kotlin.practice.R
 import com.mio4kon.kotlin.practice.util.inflate
 import com.mio4kon.kotlin.practice.util.loadUrl
 import com.mio4kon.kotlin.practice.util.showToast
+import com.mio4kon.kotlin.practice.util.views
 import org.jetbrains.anko.find
 
 /**
@@ -22,15 +23,20 @@ class UnitTestActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_unit_test)
+
         showToast("HEHE")
+
         getColor(R.color.colorAccent)
+
         val ll = LinearLayout(this)
         ll.inflate(R.layout.activity_main)
 
+
         val iv = ImageView(this)
         iv.loadUrl("http://..")
+
+        ll.views
     }
 
 

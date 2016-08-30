@@ -70,3 +70,7 @@ inline fun View.waitForLayout(crossinline f: () -> Unit) = with(viewTreeObserver
         }
     })
 }
+
+
+val ViewGroup.views: List<View>
+    get() = (0 until childCount).map { getChildAt(it) }

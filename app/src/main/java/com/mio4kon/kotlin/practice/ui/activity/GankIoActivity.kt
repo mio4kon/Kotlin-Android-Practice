@@ -14,7 +14,7 @@ import java.util.*
 
 class GankIoActivity : AppCompatActivity() {
 
-    val meiziList =ArrayList<Meizi>()
+    val meiziList = ArrayList<Meizi>()
     val adapter = GankioAdapter(meiziList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
