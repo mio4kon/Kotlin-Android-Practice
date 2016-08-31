@@ -8,36 +8,5 @@
     tools:context=".ui.activity.UnitTestActivity">
 
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="52dp" />
-
-
-    <EditText
-        android:id="@+id/et_sp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:textSize="30sp"
-        tools:text="sssss" />
-
-    <Button
-        android:id="@+id/bt_set_sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="设置sp" />
-
-    <Button
-        android:id="@+id/bt_get_sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="读取sp" />
-
-    <Button
-        android:id="@+id/bt_clear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="clear" />
 
 </LinearLayout>

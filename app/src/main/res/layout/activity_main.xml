@@ -11,13 +11,18 @@
     <Button
         android:id="@+id/recyleViewsBt"
         android:text="RecyleView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/gankIo"
+        android:id="@+id/gankIoBt"
         android:text="gankIo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/spBt"
+        android:text="sp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 </LinearLayout>

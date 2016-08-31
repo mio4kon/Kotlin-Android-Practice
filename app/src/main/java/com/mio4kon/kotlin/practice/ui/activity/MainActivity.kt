@@ -19,8 +19,12 @@ class MainActivity : AppCompatActivity() {
         recyleViewsBt.setOnClickListener {
             gotoActivity<RecyclerViewActivity>()
         }
-        gankIo.setOnClickListener {
+        gankIoBt.setOnClickListener {
             gotoActivity<GankIoActivity>()
+        }
+
+        spBt.setOnClickListener {
+            gotoActivity<SpActivity>()
         }
 
     }
