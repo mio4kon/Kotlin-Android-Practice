@@ -2,15 +2,14 @@ package com.mio4kon.kotlin.practice.ui.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.view.MenuItem
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import com.mio4kon.kotlin.practice.R
-import com.mio4kon.kotlin.practice.util.inflate
-import com.mio4kon.kotlin.practice.util.loadUrl
-import com.mio4kon.kotlin.practice.util.showToast
-import com.mio4kon.kotlin.practice.util.views
+import com.mio4kon.kotlin.practice.util.*
+import kotlinx.android.synthetic.main.activity_unit_test.*
 import org.jetbrains.anko.find
 
 /**
@@ -18,8 +17,11 @@ import org.jetbrains.anko.find
  */
 class UnitTestActivity : AppCompatActivity() {
 
+    val SP_KEY = "login_name"
 
-     val toolbar by lazy { find<Toolbar>(R.id.toolbar) }
+    val spET by lazy { find<TextView>(R.id.et_sp) }
+
+    var loginName by Sp(this, SP_KEY, "")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,16 +29,19 @@ class UnitTestActivity : AppCompatActivity() {
 
         showToast("HEHE")
 
-        getColor(R.color.colorAccent)
 
         val ll = LinearLayout(this)
-        ll.inflate(R.layout.activity_main)
-
+        val root = ll.inflate(R.layout.activity_main) as ViewGroup
 
         val iv = ImageView(this)
         iv.loadUrl("http://..")
 
-        ll.views
+        d("root children size : ${root.views.size} ")
+
+
+        bt_clear.setOnClickListener { spET.text = "" }
+        bt_set_sp.setOnClickListener { loginName = spET.text.toString() }
+        bt_get_sp.setOnClickListener { spET.text = loginName }
     }
 
 

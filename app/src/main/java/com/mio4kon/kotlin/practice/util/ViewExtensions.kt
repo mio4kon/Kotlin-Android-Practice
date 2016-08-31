@@ -7,6 +7,7 @@ import android.support.annotation.ColorInt
 import android.support.annotation.ColorRes
 import android.support.annotation.LayoutRes
 import android.support.v4.widget.DrawerLayout
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +24,9 @@ import com.bumptech.glide.Glide
 fun Context.showToast(msg: String, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(this, msg, duration).show()
 }
+
+fun d(msg: String, tag: String = "Mio4kon") = Log.d(tag, msg)
+
 
 inline fun <reified T : Activity> Activity.gotoActivity() {
     var intent = Intent(this, T::class.java)
@@ -46,7 +50,6 @@ fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false):
 fun ImageView.loadUrl(url: String) {
     Glide.with(context).load(url).fitCenter().into(this)
 }
-
 
 
 inline fun consume(f: () -> Unit): Boolean {
