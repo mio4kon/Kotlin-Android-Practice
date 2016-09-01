@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         spBt.setOnClickListener {
             gotoActivity<SpActivity>()
         }
+        delegateBt.setOnClickListener {
+            gotoActivity<DelegateActivity>()
+        }
 
     }
 
