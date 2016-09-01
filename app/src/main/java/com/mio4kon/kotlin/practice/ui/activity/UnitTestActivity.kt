@@ -7,12 +7,12 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import com.mio4kon.kotlin.practice.R
 import com.mio4kon.kotlin.practice.util.*
+import kotlinx.android.synthetic.main.activity_unit_test.*
 
 /**
  * Created by mio4kon on 16/8/29.
  */
 class UnitTestActivity : AppCompatActivity() {
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,8 +30,11 @@ class UnitTestActivity : AppCompatActivity() {
 
         d("root children size : ${root.views.size} ")
 
-    }
+        tv.afterMeasured {
+            d("height: ${tv.height}")
+        }
 
+    }
 
 
 }

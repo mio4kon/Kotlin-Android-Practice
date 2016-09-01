@@ -8,5 +8,9 @@
     tools:context=".ui.activity.UnitTestActivity">
 
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
 
 </LinearLayout>

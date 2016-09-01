@@ -64,12 +64,13 @@ inline fun DrawerLayout.consume(f: () -> Unit): Boolean {
     return true
 }
 
-inline fun View.waitForLayout(crossinline f: () -> Unit) = with(viewTreeObserver) {
-
-    addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+inline fun <T : View> T.afterMeasured(crossinline f: T.() -> Unit) {
+    viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
         override fun onGlobalLayout() {
-            removeOnGlobalLayoutListener(this)
-            f()
+            if (measuredWidth > 0 && measuredHeight > 0) {
+                viewTreeObserver.removeOnGlobalLayoutListener(this)
+                f()
+            }
         }
     })
 }

@@ -35,8 +35,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean = when(item.itemId) {
-        R.id.action_unit->consume{gotoActivity<UnitTestActivity>()}
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
+        R.id.action_unit -> consume { gotoActivity<UnitTestActivity>() }
         else -> super.onOptionsItemSelected(item)
     }
 
