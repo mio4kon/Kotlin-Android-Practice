@@ -3,13 +3,12 @@ package com.mio4kon.kotlin.practice.ui.adater
 
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.RecyclerView.Adapter
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.bumptech.glide.Glide
 import com.mio4kon.kotlin.practice.R
 import com.mio4kon.kotlin.practice.model.Meizi
+import com.mio4kon.kotlin.practice.util.inflate
 import com.mio4kon.kotlin.practice.util.loadUrl
 import org.jetbrains.anko.find
 
@@ -20,8 +19,7 @@ import org.jetbrains.anko.find
 class GankioAdapter(val items: List<Meizi>) : Adapter<GankioAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GankioAdapter.ViewHolder {
-        val root = LayoutInflater.from(parent.context).inflate(R.layout.item_big_img, parent, false)
-
+        val root = parent.inflate(R.layout.item_big_img)
         return ViewHolder(root)
     }
 
@@ -33,7 +31,7 @@ class GankioAdapter(val items: List<Meizi>) : Adapter<GankioAdapter.ViewHolder>(
 
 
     class ViewHolder(root: View) : RecyclerView.ViewHolder(root) {
-        private var imageView: ImageView = root.find<ImageView>(R.id.iv_mio)
+        private var imageView = root.find<ImageView>(R.id.iv_mio)
 
         fun setImage(url: String) {
             imageView.loadUrl(url)
